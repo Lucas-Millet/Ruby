@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  lvl: 1
+  xp: 1
+  mdp: MyString
+  email: MyString
+
+two:
+  name: MyString
+  lvl: 1
+  xp: 1
+  mdp: MyString
+  email: MyString

@@ -1,0 +1,17 @@
+<h1>Créer votre héros ! </h1>
+
+<%= form_for :player do |p| %>
+  <p>
+    <%= p.label :nom %><br>
+    <%= p.text_field :name %>
+  </p>
+ 
+  <p>
+    <%= p.label :mail %><br>
+    <%= p.text_field :email %>
+  </p>
+ 
+  <p>
+    <%= p.submit %>
+  </p>
+<% end %>

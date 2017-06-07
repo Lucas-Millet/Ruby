@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: 
+  atk: 1
+  def: 1
+  mage: 1
+  lvl: 1
+
+two:
+  name: 
+  atk: 1
+  def: 1
+  mage: 1
+  lvl: 1

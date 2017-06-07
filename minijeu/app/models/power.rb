@@ -1,0 +1,3 @@
+class Power < ApplicationRecord
+	
+end
