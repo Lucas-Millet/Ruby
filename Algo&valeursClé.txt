@@ -1,0 +1,50 @@
+Deroulement d'un combat
+
+	Choix de la creature controllé par IA (parmis les autre joueur +- 3 niveau)
+	Choix au hasard du premier joueur influancé par le niveau
+		Calcule :  if (rand() % 10 + (niveau joueur) / rand() % 10 + (niveau IA) > 1)
+	Debut des tours
+		On retire les effet expiré
+		On calcule les Points de combat du joueur et de l'ia
+			ATK = ATK de base + ATK de l'arme + ATK des effets
+			DEF = DEF de base + DEF de l'arme + DEF des effets
+		Choix de l'action
+			Attaque
+				Dmg phase 
+				Si l'adversaire attaque aussi 
+					Riposte
+						Dmg phase (en sens inverse avec degat / 3) -> joueur > IA
+			Defense
+				Ajout de l'effet def = def * 1.5
+			Pouvoir
+				Pouvoir d'attaque
+					Dmg phase (ou ATK = ATK du pouvoir)
+				Pouvoir A effet
+					Ajout de l'effet def = def * 1.5
+		Fin du tour
+
+Deroulement d'une dmg phase
+	Calcule des degat (degat = ATK - DEF)
+	Mise a jours des points de vie 
+	Si points de vie < 0
+		Fin du combat
+		
+Calcule de l'experience
+	Exp = (Niveau + niveau adv) / 2 * 10
+	Si victorieux
+		Exp = exp * 10
+		
+Experience requise pour monter en niveau
+	500 * niveau * niveau (on double la qty de combat requis a chaque niveau)
+
+Point de combat initiaux (sans arme en ne faisant qu'attaquer on a un combat de ~4 tourd)
+	Niveau 1 
+	atk = 10
+	Def = 5
+	Life = 20
+
+Evolution des points de Combat (les degat augmente de la meme facon que la vie donc la durée d'un combat est constante)
+	Lvl x
+	Atk =10 + 2x
+	Def = 5 + x
+Life += 20 + 4x
